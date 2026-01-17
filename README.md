@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Combined Assignment App
+A React-based application that addresses two core challenges: visualizing supplier pricing data through an interactive heatmap and displaying hierarchical product information with a dynamic tree table. Designed for clarity, performance, and ease of use.
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots
 
-## Available Scripts
+Below are screenshots demonstrating the app’s key functionalities:
 
-In the project directory, you can run:
+**Problem 1: Supplier Heatmap View** 
 
-### `npm start`
+<img width="1913" height="554" alt="image" src="https://github.com/user-attachments/assets/75ddad8b-bbc3-4d95-8103-eb1132ae9f2f" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Problem 2: Hierarchical Tree Table View** 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1905" height="606" alt="image" src="https://github.com/user-attachments/assets/0aa1a36d-7617-44c4-82c6-a5fea21f4f5e" />
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Overview
 
-### `npm run build`
+This React application implements two key features as per the assignment requirements:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Supplier Heatmap (Problem 1)**  
+   Visualizes supplier rate data from a CSV file with a heatmap color scale indicating pricing differences. Features include sortable columns, freeze columns, and column visibility toggling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Hierarchical Tree Table (Problem 2)**  
+   Displays hierarchical data with expandable/collapsible nodes showing Category, Subcategories, and Item details in a clean tree table format.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Features & Highlights
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **CSV File Upload & Parsing**  
+  Dynamically load data for both problem views.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Heatmap Logic (Problem 1)**  
+  - Conditional coloring from green (lowest rate) to red (highest rate) per row.  
+  - Percentage difference from estimated rate displayed with arrows and colored text.  
+  - Freeze columns to lock important fields during horizontal scroll.  
+  - Sorting by any column ascending/descending.  
+  - Column show/hide toggle for customizable views.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Hierarchical Tree Table (Problem 2)**  
+  - Multi-level expandable/collapsible rows reflecting category hierarchy.  
+  - Clean, responsive design.  
+  - Numeric columns aligned and styled for readability.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Reusable React Components & Hooks**  
+  - Clean code separation between UI and data logic.  
+  - Memoization for performance on large datasets.  
+  - Minimal prop drilling with clear naming conventions.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React.js (Functional Components & Hooks)  
+- JavaScript (ES6+)  
+- CSS3 with scoped styles  
+- CSV parsing with `papaparse`  
+- Deployment ready (Vercel / Netlify compatible)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Setup Instructions
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Node.js (v16 or later recommended)  
+- npm (comes with Node.js)  
+- Git
+### Step-by-Step Setup
 
-### Making a Progressive Web App
+```bash
+# Clone the Repository
+git clone https://github.com/nitin2001581402/supplier-heatmap-tree-assignment.git
+cd supplier-heatmap-tree-assignment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Install Dependencies
+npm install
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run the Application
+npm start
