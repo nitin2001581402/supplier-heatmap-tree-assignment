@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "./components/Navigation";
+import "./App.css";
+
 
 // Problem 1 components
 import FileUpload from "./components/problem1/FileUpload";
