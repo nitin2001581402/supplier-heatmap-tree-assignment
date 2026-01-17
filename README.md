@@ -8,7 +8,8 @@ Below are screenshots demonstrating the app’s key functionalities:
 
 **Problem 1: Supplier Heatmap View** 
 
-<img width="1913" height="554" alt="image" src="https://github.com/user-attachments/assets/75ddad8b-bbc3-4d95-8103-eb1132ae9f2f" />
+<img width="1903" height="546" alt="image" src="https://github.com/user-attachments/assets/b7abbc6a-30e9-42ed-9a19-3c1402cc6c49" />
+
 
 **Problem 2: Hierarchical Tree Table View** 
 
