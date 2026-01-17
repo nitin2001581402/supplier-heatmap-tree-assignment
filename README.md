@@ -69,11 +69,17 @@ This React application implements two key features as per the assignment require
 - Node.js (v16 or later recommended)  
 - npm (comes with Node.js)  
 - Git
-
 ### Step-by-Step Setup
 
-1. **Clone the Repository**
-
 ```bash
+# Clone the Repository
 git clone https://github.com/nitin2001581402/supplier-heatmap-tree-assignment.git
-cd TREE-TABLE-APP
+cd supplier-heatmap-tree-assignment
+
+# Install Dependencies
+npm install
+
+# Run the Application
+npm start
+
+npm start
