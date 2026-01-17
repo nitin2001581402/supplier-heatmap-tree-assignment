@@ -12,7 +12,15 @@ export default function SupplierTable({ data, onReset }) {
   const [sortDir, setSortDir] = useState("asc");
 
   const toggleHide = (c) =>
-    setHidden((h) => (h.includes(c) ? h.filter((x) => x !== c) : [...h, c]));
+    setHidden((h) =>
+      h.includes(c) ? h.filter((x) => x !== c) : [...h, c]
+    );
+
+  /* 🔧 FIX 1: derive visible columns */
+  const visibleColumns = useMemo(
+    () => columns.filter((c) => !hidden.includes(c)),
+    [columns, hidden]
+  );
 
   const normalizedData = useMemo(() => {
     return data.map((row) => {
@@ -41,7 +49,10 @@ export default function SupplierTable({ data, onReset }) {
     });
   }, [normalizedData, sortCol, sortDir]);
 
-  const freezeIndex = freezeUntil ? columns.indexOf(freezeUntil) : -1;
+  /* 🔧 FIX 2: freeze index based on visible columns */
+  const freezeIndex = freezeUntil
+    ? visibleColumns.indexOf(freezeUntil)
+    : -1;
 
   return (
     <>
@@ -65,53 +76,46 @@ export default function SupplierTable({ data, onReset }) {
         <table>
           <thead>
             <tr>
-              {columns.map(
-                (c, i) =>
-                  !hidden.includes(c) && (
-                    <th
-                      key={c}
-                      className={i <= freezeIndex ? "sticky" : ""}
-                      style={{ left: i * 160 }}
-                    >
-                      {c}
-                    </th>
-                  )
-              )}
+              {visibleColumns.map((c, i) => (
+                <th
+                  key={c}
+                  className={i <= freezeIndex ? "sticky" : ""}
+                style={i <= freezeIndex ? { left: i * 160 } : undefined}
+                >
+                  {c}
+                </th>
+              ))}
             </tr>
           </thead>
 
           <tbody>
-            {sortedData.map((row, i) => {
+            {sortedData.map((row, rowIndex) => {
               const values = supplierCols.map((c) => row[c]);
               const min = Math.min(...values);
               const max = Math.max(...values);
 
               return (
-                <tr key={i}>
-                  {columns.map(
-                    (c, j) =>
-                      !hidden.includes(c) && (
-                        <td
-                          key={c}
-                          className={j <= freezeIndex ? "sticky" : ""}
-                          style={{ left: j * 160 }}
-                        >
-                          {supplierCols.includes(c) ? (
-                            <HeatmapCell
-                              value={row[c]}
-                              min={min}
-                              max={max}
-                              estimated={row["Estimated Rate"]}
-                            />
-                          ) : c === "Estimated Rate" ? (
-                          `$${row[c].toFixed(2)}`
-                         ) : (
-                          row[c]
-                         )
-                         }
-                        </td>
-                      )
-                  )}
+                <tr key={rowIndex}>
+                  {visibleColumns.map((c, colIndex) => (
+                    <td
+                      key={c}
+                      className={colIndex <= freezeIndex ? "sticky" : ""}
+                      style={{ left: colIndex * 160 }}
+                    >
+                      {supplierCols.includes(c) ? (
+                        <HeatmapCell
+                          value={row[c]}
+                          min={min}
+                          max={max}
+                          estimated={row["Estimated Rate"]}
+                        />
+                      ) : c === "Estimated Rate" ? (
+                        `$${row[c].toFixed(2)}`
+                      ) : (
+                        row[c]
+                      )}
+                    </td>
+                  ))}
                 </tr>
               );
             })}
