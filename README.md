@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Combined Assignment App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo: [https://your-live-demo-link.vercel.app/](https://your-live-demo-link.vercel.app/)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+Below are screenshots demonstrating the app’s key functionalities:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| **Supplier Heatmap View**                           | **Hierarchical Tree Table View**                   |
+|----------------------------------------------------|----------------------------------------------------|
+| ![Supplier Heatmap](./screenshots/heatmap.png)     | ![Tree Table](./screenshots/tree-table.png)        |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| **CSV Upload Dialog**                              | **Column Sorting & Freeze Columns**                 |
+|----------------------------------------------------|----------------------------------------------------|
+| ![CSV Upload](./screenshots/csv-upload.png)        | ![Sorting & Freeze](./screenshots/sorting-freeze.png) |
 
-### `npm test`
+| **Voice Recording State**                           | **Transcription Result**                            |
+|----------------------------------------------------|----------------------------------------------------|
+| ![Recording](./screenshots/recording.png)          | ![Transcription](./screenshots/transcription.png)  |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Note:* Replace the paths with your actual screenshots.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This React application implements two key features as per the assignment requirements:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Supplier Heatmap (Problem 1)**  
+   Visualizes supplier rate data from a CSV file with a heatmap color scale indicating pricing differences. Features include sortable columns, freeze columns, and column visibility toggling.
 
-### `npm run eject`
+2. **Hierarchical Tree Table (Problem 2)**  
+   Displays hierarchical data with expandable/collapsible nodes showing Category, Subcategories, and Item details in a clean tree table format.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features & Highlights
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **CSV File Upload & Parsing**  
+  Dynamically load data for both problem views.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Heatmap Logic (Problem 1)**  
+  - Conditional coloring from green (lowest rate) to red (highest rate) per row.  
+  - Percentage difference from estimated rate displayed with arrows and colored text.  
+  - Freeze columns to lock important fields during horizontal scroll.  
+  - Sorting by any column ascending/descending.  
+  - Column show/hide toggle for customizable views.
 
-## Learn More
+- **Hierarchical Tree Table (Problem 2)**  
+  - Multi-level expandable/collapsible rows reflecting category hierarchy.  
+  - Clean, responsive design.  
+  - Numeric columns aligned and styled for readability.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Reusable React Components & Hooks**  
+  - Clean code separation between UI and data logic.  
+  - Memoization for performance on large datasets.  
+  - Minimal prop drilling with clear naming conventions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React.js (Functional Components & Hooks)  
+- JavaScript (ES6+)  
+- CSS3 with scoped styles  
+- CSV parsing with `papaparse`  
+- Deployment ready (Vercel / Netlify compatible)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Setup Instructions
 
-### Making a Progressive Web App
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Node.js (v16 or later recommended)  
+- npm (comes with Node.js)  
+- Git
 
-### Advanced Configuration
+### Step-by-Step Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Clone the Repository**
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
