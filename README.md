@@ -1,5 +1,5 @@
 # Combined Assignment App
-
+A React-based application that addresses two core challenges: visualizing supplier pricing data through an interactive heatmap and displaying hierarchical product information with a dynamic tree table. Designed for clarity, performance, and ease of use.
 ---
 
 ## Screenshots
