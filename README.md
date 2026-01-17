@@ -75,7 +75,7 @@ This React application implements two key features as per the assignment require
 ```bash
 # Clone the Repository
 git clone https://github.com/nitin2001581402/supplier-heatmap-tree-assignment.git
-cd supplier-heatmap-tree-assignment
+cd TREE-TABLE-APP
 
 # Install Dependencies
 npm install
