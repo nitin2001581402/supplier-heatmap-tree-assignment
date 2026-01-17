@@ -1,13 +1,143 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Segoe UI, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app {
+  padding: 20px;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.toolbar {
+  margin-bottom: 20px; 
+}
+
+.problem1 th {
+  position: sticky;
+  top: 0;
+  z-index: 5; 
+}
+
+.table-wrap {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.problem1 table {
+  width: 80%;
+  min-width: 1400px;
+}
+
+.problem2 table {
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+th {
+  background: #f0f2f5;
+  font-weight: 600;
+}
+
+td {
+  text-align: left;
+}
+
+table button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  text-align: center;
+  font-weight: 600;
+}
+
+.problem1 table {
+  min-width: 1500px;
+  width: max-content;
+}
+
+.problem1 td {
+  text-align: center;
+}
+
+.problem1 th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.heat-cell {
+  min-width: 110px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+
+.heat-cell small {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.heat-green {
+  background: #5be05b;
+}
+
+.heat-light-green {
+  background: #cce65a;
+}
+
+.heat-yellow {
+  background: #e5cd52;
+}
+
+.heat-orange {
+  background: #e3a64f;
+}
+
+.heat-red {
+  background: #e35757;
+}
+
+.heat-up {
+  color: #b00020; 
+}
+
+.heat-down {
+  color: #006400; 
+}
+
+.heat-neutral {
+  color: #333;
 }
