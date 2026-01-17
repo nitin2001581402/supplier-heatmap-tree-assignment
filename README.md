@@ -1,26 +1,18 @@
 # Combined Assignment App
 
-Live Demo: [https://your-live-demo-link.vercel.app/](https://your-live-demo-link.vercel.app/)
-
 ---
 
 ## Screenshots
 
 Below are screenshots demonstrating the app’s key functionalities:
 
-| **Supplier Heatmap View**                           | **Hierarchical Tree Table View**                   |
-|----------------------------------------------------|----------------------------------------------------|
-| ![Supplier Heatmap](./screenshots/heatmap.png)     | ![Tree Table](./screenshots/tree-table.png)        |
+**Problem 1: Supplier Heatmap View** 
 
-| **CSV Upload Dialog**                              | **Column Sorting & Freeze Columns**                 |
-|----------------------------------------------------|----------------------------------------------------|
-| ![CSV Upload](./screenshots/csv-upload.png)        | ![Sorting & Freeze](./screenshots/sorting-freeze.png) |
+<img width="1913" height="554" alt="image" src="https://github.com/user-attachments/assets/75ddad8b-bbc3-4d95-8103-eb1132ae9f2f" />
 
-| **Voice Recording State**                           | **Transcription Result**                            |
-|----------------------------------------------------|----------------------------------------------------|
-| ![Recording](./screenshots/recording.png)          | ![Transcription](./screenshots/transcription.png)  |
+**Problem 2: Hierarchical Tree Table View** 
 
-*Note:* Replace the paths with your actual screenshots.
+<img width="1905" height="606" alt="image" src="https://github.com/user-attachments/assets/0aa1a36d-7617-44c4-82c6-a5fea21f4f5e" />
 
 ---
 
@@ -83,5 +75,5 @@ This React application implements two key features as per the assignment require
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/nitin2001581402/supplier-heatmap-tree-assignment.git
+cd TREE-TABLE-APP
